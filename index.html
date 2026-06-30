@@ -39,9 +39,10 @@
     <!-- HEADER -->
     <header class="fixed top-0 left-0 w-full z-[9999] bg-black/90 backdrop-blur-xl border-b border-white/10">
 
-        <div class="max-w-7xl mx-auto px-6 relative">
+    <div class="w-full px-0">
 
-            <!-- BARRA -->
+        <div class="max-w-7xl mx-auto px-6 sm:px-8">
+
             <div class="glass rounded-2xl mt-4 px-5 sm:px-8 py-4 flex items-center justify-between">
 
                 <!-- LOGO -->
@@ -88,215 +89,140 @@
 
             </div>
 
-            <!-- MOBILE MENU -->
-            <div id="mobileMenu"
-                class="hidden absolute left-0 right-0 top-full mt-3 rounded-2xl p-6 flex flex-col gap-4 text-white text-center text-lg font-medium bg-black/95 backdrop-blur-xl border border-white/10 z-[9998]">
+        </div>
 
-                <a href="#inicio" onclick="toggleMenu()" class="hover:text-sky-400">Início</a>
-                <a href="#servicos" onclick="toggleMenu()" class="hover:text-sky-400">Serviços</a>
-                <a href="#beneficios" onclick="toggleMenu()" class="hover:text-sky-400">Diferenciais</a>
-                <a href="#processo" onclick="toggleMenu()" class="hover:text-sky-400">Processo</a>
-                <a href="#cobertura" onclick="toggleMenu()" class="hover:text-sky-400">Cobertura</a>
-                <a href="#contato" onclick="toggleMenu()" class="hover:text-sky-400">Contato</a>
+    </div>
 
-                <a href="https://wa.me/5524998320173"
-                    class="gradient px-6 py-3 rounded-xl text-white font-semibold mt-2">
+</header>
 
-                    Diagnóstico Gratuito
 
+<!-- HERO -->
+<section id="inicio" class="min-h-screen flex items-center relative overflow-hidden pt-28 sm:pt-32 lg:pt-24">
+
+    <!-- FUNDO -->
+    <div class="absolute inset-0">
+
+        <img src="images/hero-bg.jpg" class="w-full h-full object-cover opacity-40" alt="Fundo hero">
+
+        <div class="absolute inset-0 bg-gradient-to-b from-zinc-950/90 via-zinc-950/70 to-black"></div>
+
+        <div class="absolute inset-0 bg-sky-500/5 blur-[120px]"></div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
+
+        <!-- ESQUERDA -->
+        <div class="text-center lg:text-left">
+
+            <div class="inline-flex items-center gap-3 glass px-4 py-2 rounded-full text-sky-400 text-xs sm:text-sm font-medium mb-6">
+                <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+                Suporte especializado para empresas
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-[3.2rem] font-extrabold leading-tight lg:leading-[1.1] mb-6">
+                Sua empresa merece uma
+                <span class="text-sky-400">TI que nunca para.</span>
+            </h1>
+
+            <p class="text-zinc-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-8">
+                Soluções completas em suporte técnico, infraestrutura, servidores, backup, monitoramento, segurança e gestão de TI.
+            </p>
+
+            <!-- CARDS MOBILE -->
+            <div class="flex lg:hidden flex-wrap justify-center gap-3 mb-8">
+
+                <div class="glass px-3 py-2 rounded-xl flex items-center gap-2">
+                    <i class="bi bi-headset text-sky-400"></i>
+                    <span class="text-xs">Suporte</span>
+                </div>
+
+                <div class="glass px-3 py-2 rounded-xl flex items-center gap-2">
+                    <i class="bi bi-bar-chart-line text-sky-400"></i>
+                    <span class="text-xs">Consultoria</span>
+                </div>
+
+                <div class="glass px-3 py-2 rounded-xl flex items-center gap-2">
+                    <i class="bi bi-tools text-sky-400"></i>
+                    <span class="text-xs">Reparo</span>
+                </div>
+
+                <div class="glass px-3 py-2 rounded-xl flex items-center gap-2">
+                    <i class="bi bi-gear-fill text-sky-400"></i>
+                    <span class="text-xs">Sistemas</span>
+                </div>
+
+            </div>
+
+            <!-- BOTÕES -->
+            <div class="flex flex-col sm:flex-row gap-4 mb-10 justify-center lg:justify-start">
+
+                <a href="#contato"
+                    class="gradient px-6 py-4 rounded-2xl font-bold text-base sm:text-lg glow hover:scale-105 transition w-full sm:w-auto text-center">
+                    Solicitar Diagnóstico
+                </a>
+
+                <a href="#servicos"
+                    class="glass px-6 py-4 rounded-2xl font-semibold hover:border-sky-400 transition w-full sm:w-auto text-center">
+                    Conhecer Serviços
                 </a>
 
             </div>
 
-        </div>
+            <!-- CONFIANÇA -->
+            <div class="flex flex-wrap justify-center lg:justify-start gap-4 text-zinc-400 text-xs sm:text-sm mb-10">
 
-    </header>
+                <span class="flex items-center gap-2">
+                    <i class="bi bi-check-circle-fill text-sky-400"></i>
+                    Atendimento Remoto
+                </span>
 
-    <!-- HERO -->
-    <section id="inicio" class="min-h-screen flex items-center relative overflow-hidden pt-24">
+                <span class="flex items-center gap-2">
+                    <i class="bi bi-check-circle-fill text-sky-400"></i>
+                    SLA Garantido
+                </span>
 
-        <!-- FUNDO (IMAGEM + OVERLAY) -->
-        <div class="absolute inset-0">
-
-            <!-- IMAGEM DE FUNDO -->
-            <img src="images/hero-bg.jpg" class="w-full h-full object-cover opacity-40" alt="Fundo hero">
-
-            <!-- OVERLAY ESCURO (para legibilidade) -->
-            <div class="absolute inset-0 bg-gradient-to-b from-zinc-950/90 via-zinc-950/70 to-black"></div>
-
-            <!-- GLOW AZUL SUAVE -->
-            <div class="absolute inset-0 bg-sky-500/5 blur-[120px]"></div>
-
-        </div>
-
-        <!-- CONTEÚDO -->
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
-
-            <!-- ESQUERDA -->
-            <div class="text-center lg:text-left">
-
-                <!-- BADGE -->
-                <div
-                    class="inline-flex items-center gap-3 glass px-4 py-2 rounded-full text-sky-400 text-xs sm:text-sm font-medium mb-6">
-                    <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
-                    Suporte especializado para empresas
-                </div>
-
-                <!-- TÍTULO -->
-                <h1
-                    class="text-3xl sm:text-4xl lg:text-[3.2rem] font-extrabold leading-tight lg:leading-[1.1] tracking-tight mb-6">
-                    Sua empresa merece uma
-                    <span class="text-sky-400">TI que nunca para.</span>
-                </h1>
-
-                <!-- TEXTO -->
-                <p class="text-zinc-400 text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8">
-                    Soluções completas em suporte técnico, infraestrutura,
-                    servidores, backup, monitoramento, segurança e gestão de TI
-                    para empresas que precisam de estabilidade e produtividade.
-                </p>
-
-                <!-- CARDS MOBILE -->
-                <div class="flex lg:hidden flex-wrap justify-center gap-3 mb-8">
-
-                    <div class="glass px-3 py-2 rounded-xl flex items-center gap-2">
-                        <i class="bi bi-headset text-sky-400"></i>
-                        <span class="text-xs">Suporte</span>
-                    </div>
-
-                    <div class="glass px-3 py-2 rounded-xl flex items-center gap-2">
-                        <i class="bi bi-bar-chart-line text-sky-400"></i>
-                        <span class="text-xs">Consultoria</span>
-                    </div>
-
-                    <div class="glass px-3 py-2 rounded-xl flex items-center gap-2">
-                        <i class="bi bi-tools text-sky-400"></i>
-                        <span class="text-xs">Reparo</span>
-                    </div>
-
-                    <div class="glass px-3 py-2 rounded-xl flex items-center gap-2">
-                        <i class="bi bi-gear-fill text-sky-400"></i>
-                        <span class="text-xs">Sistemas</span>
-                    </div>
-
-                </div>
-
-                <!-- BOTÕES -->
-                <div class="flex flex-col sm:flex-row gap-4 mb-10 justify-center lg:justify-start w-full">
-
-                    <a href="#contato"
-                        class="gradient px-6 py-4 rounded-2xl font-bold text-base sm:text-lg glow hover:scale-105 transition w-full sm:w-auto text-center">
-                        Solicitar Diagnóstico
-                    </a>
-
-                    <a href="#servicos"
-                        class="glass px-6 py-4 rounded-2xl font-semibold hover:border-sky-400 transition w-full sm:w-auto text-center">
-                        Conhecer Serviços
-                    </a>
-
-                </div>
-
-                <!-- CONFIANÇA -->
-                <div
-                    class="flex flex-wrap justify-center lg:justify-start gap-4 text-zinc-400 text-xs sm:text-sm mb-10">
-
-                    <span class="flex items-center gap-2">
-                        <i class="bi bi-check-circle-fill text-sky-400"></i>
-                        Atendimento Remoto
-                    </span>
-
-                    <span class="flex items-center gap-2">
-                        <i class="bi bi-check-circle-fill text-sky-400"></i>
-                        SLA Garantido
-                    </span>
-
-                    <span class="flex items-center gap-2">
-                        <i class="bi bi-check-circle-fill text-sky-400"></i>
-                        Monitoramento 24/7
-                    </span>
-
-                </div>
-
-                <!-- ESTATÍSTICAS -->
-                <div class="grid grid-cols-3 gap-3 sm:gap-5 max-w-xl mx-auto lg:mx-0">
-
-                    <div class="glass rounded-2xl py-4 sm:py-6">
-                        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-black text-sky-400 text-center">+850</h3>
-                        <p class="text-center text-zinc-500 mt-1 text-xs sm:text-sm">Empresas</p>
-                    </div>
-
-                    <div class="glass rounded-2xl py-4 sm:py-6">
-                        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-black text-sky-400 text-center">12+</h3>
-                        <p class="text-center text-zinc-500 mt-1 text-xs sm:text-sm">Anos</p>
-                    </div>
-
-                    <div class="glass rounded-2xl py-4 sm:py-6">
-                        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-black text-sky-400 text-center">24/7</h3>
-                        <p class="text-center text-zinc-500 mt-1 text-xs sm:text-sm">Suporte</p>
-                    </div>
-
-                </div>
+                <span class="flex items-center gap-2">
+                    <i class="bi bi-check-circle-fill text-sky-400"></i>
+                    Monitoramento 24/7
+                </span>
 
             </div>
 
-            <!-- DIREITA -->
-            <div class="relative hidden lg:flex justify-center items-center w-full h-[520px] xl:h-[760px]">
+            <!-- STATS (IGUAIS NO MOBILE) -->
+            <div class="grid grid-cols-3 gap-3 sm:gap-5 max-w-xl mx-auto lg:mx-0">
 
-                <div
-                    class="absolute w-[400px] xl:w-[720px] h-[400px] xl:h-[720px] rounded-full bg-sky-500/20 blur-[140px]">
+                <div class="glass rounded-2xl min-h-[92px] flex flex-col items-center justify-center py-4">
+                    <h3 class="text-2xl sm:text-3xl lg:text-4xl font-black text-sky-400">+850</h3>
+                    <p class="text-zinc-500 text-xs sm:text-sm">Empresas</p>
                 </div>
 
-                <img src="images/hero-notebook.png" class="relative z-20 w-[420px] xl:w-[760px] select-none">
-
-                <!-- CARD SUPERIOR -->
-                <div
-                    class="glass absolute top-24 xl:top-40 left-1/2 -translate-x-1/2 px-3 py-2 xl:px-4 xl:py-3 rounded-xl w-44 xl:w-52 z-30">
-                    <div class="flex items-center gap-3">
-                        <div class="gradient w-9 h-9 xl:w-10 xl:h-10 rounded-lg flex items-center justify-center">
-                            <i class="bi bi-headset text-sm xl:text-lg"></i>
-                        </div>
-                        <h4 class="font-semibold text-xs xl:text-sm whitespace-nowrap">Suporte Online</h4>
-                    </div>
+                <div class="glass rounded-2xl min-h-[92px] flex flex-col items-center justify-center py-4">
+                    <h3 class="text-2xl sm:text-3xl lg:text-4xl font-black text-sky-400">12+</h3>
+                    <p class="text-zinc-500 text-xs sm:text-sm">Anos</p>
                 </div>
 
-                <!-- CARD ESQUERDA -->
-                <div
-                    class="glass absolute left-0 top-1/2 -translate-y-1/2 px-3 py-2 xl:px-4 xl:py-3 rounded-xl w-44 xl:w-52 z-30">
-                    <div class="flex items-center gap-3">
-                        <div class="gradient w-9 h-9 xl:w-10 xl:h-10 rounded-lg flex items-center justify-center">
-                            <i class="bi bi-bar-chart-line text-sm xl:text-lg"></i>
-                        </div>
-                        <h4 class="font-semibold text-xs xl:text-sm whitespace-nowrap">Consultorias</h4>
-                    </div>
-                </div>
-
-                <!-- CARD DIREITA -->
-                <div
-                    class="glass absolute right-0 top-1/2 -translate-y-1/2 px-3 py-2 xl:px-4 xl:py-3 rounded-xl w-40 xl:w-44 z-30">
-                    <div class="flex items-center gap-3">
-                        <div class="gradient w-9 h-9 xl:w-10 xl:h-10 rounded-lg flex items-center justify-center">
-                            <i class="bi bi-tools text-sm xl:text-lg"></i>
-                        </div>
-                        <h4 class="font-semibold text-xs xl:text-sm whitespace-nowrap">Reparo</h4>
-                    </div>
-                </div>
-
-                <!-- CARD INFERIOR -->
-                <div
-                    class="glass absolute bottom-24 xl:bottom-40 left-1/2 -translate-x-1/2 px-3 py-2 xl:px-4 xl:py-3 rounded-xl w-40 xl:w-44 z-30">
-                    <div class="flex items-center gap-3">
-                        <div class="gradient w-9 h-9 xl:w-10 xl:h-10 rounded-lg flex items-center justify-center">
-                            <i class="bi bi-gear-fill text-sm xl:text-lg"></i>
-                        </div>
-                        <h4 class="font-semibold text-xs xl:text-sm whitespace-nowrap">Sistemas</h4>
-                    </div>
+                <div class="glass rounded-2xl min-h-[92px] flex flex-col items-center justify-center py-4">
+                    <h3 class="text-2xl sm:text-3xl lg:text-4xl font-black text-sky-400">24/7</h3>
+                    <p class="text-zinc-500 text-xs sm:text-sm">Suporte</p>
                 </div>
 
             </div>
 
         </div>
 
-    </section>
+        <!-- DIREITA -->
+        <div class="relative hidden lg:flex justify-center items-center w-full h-[520px] xl:h-[760px]">
+
+            <div class="absolute w-[400px] xl:w-[720px] h-[400px] xl:h-[720px] rounded-full bg-sky-500/20 blur-[140px]"></div>
+
+            <img src="images/hero-notebook.png" class="relative z-20 w-[420px] xl:w-[760px] select-none">
+
+        </div>
+
+    </div>
+
+</section>
 
     <!-- DIFERENCIAIS -->
     <section id="beneficios" class="py-20 md:py-28 bg-white text-zinc-900">
