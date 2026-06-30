@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* 🔥 scroll global mais correto */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px; /* corrige links do header */
+}
+
+body {
+    background: #050505;
+    overflow-x: hidden;
+    color: white;
+}
+
+body.overflow-hidden {
+    overflow: hidden;
+}
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* =========================
+   BACKGROUNDS
+========================= */
+
+.hero-bg {
+    background:
+        radial-gradient(circle at top left, rgba(14, 165, 233, .18), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(37, 99, 235, .18), transparent 35%),
+        #050505;
+}
+
+.gradient {
+    background: linear-gradient(135deg, #0ea5e9, #2563eb);
+}
+
+.glass {
+    background: rgba(255, 255, 255, .05);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, .08);
+}
+
+.glow {
+    box-shadow: 0 0 40px rgba(14, 165, 233, .25);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card-hover {
+    transition: .4s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    border-color: #0ea5e9;
+    box-shadow: 0 0 40px rgba(14, 165, 233, .12);
+}
+
+/* =========================
+   MENU (FIXO REAL)
+========================= */
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+
+    transition: .3s;
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.menu.scrolled {
+    background: rgba(5, 5, 5, 0.85);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+
+.floating {
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease;
+}
+
+.faq-item.active .faq-content {
+    max-height: 500px;
+}
+
+.faq-icon {
+    transition: .3s;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+/* =========================
+   WHATSAPP FLOAT
+========================= */
+
+.whatsapp-float {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 999;
+}
+
+/* =========================
+   GRID HERO
+========================= */
+
+.hero-grid {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .03) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+.overlay-dark {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, .7), transparent);
+}
+
+/* =========================
+   IMAGENS
+========================= */
+
+.equipment-image {
+    height: 280px;
+    width: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.card-hover:hover .equipment-image {
+    transform: scale(1.05);
+}
+
+/* =========================
+   STAT
+========================= */
+
+.stat-number {
+    background: linear-gradient(135deg, #0ea5e9, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* =========================
+   PROCESS LINE
+========================= */
+
+.process-line {
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, .08);
+    z-index: -1;
+}
+
+/* =========================
+   BASE RESPONSIVE FIX
+========================= */
+
+@media(max-width: 768px) {
+    h2 {
+        line-height: 1.1 !important;
+    }
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1024px) {
+
+    .hero-bg .grid,
+    #contato .grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .hero-bg {
+        padding-top: 140px;
+        padding-bottom: 80px;
+    }
+
+    .hero-bg h2 {
+        font-size: 4rem !important;
+    }
+
+    #equipamentos .grid,
+    #depoimentos .grid,
+    #diferenciais .grid,
+    #processo .grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    section {
+        padding-top: 90px !important;
+        padding-bottom: 90px !important;
+        scroll-margin-top: 110px; /* 🔥 importante */
+    }
+
+    .menu .max-w-7xl {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+    .menu a.gradient {
+        display: none;
+    }
+
+    h1 { font-size: 1.5rem !important; }
+    h2 { font-size: 2.5rem !important; line-height: 1.1 !important; }
+    h3 { font-size: 1.5rem !important; }
+
+    p { font-size: .95rem; }
+
+    .hero-bg {
+        min-height: auto;
+        text-align: center;
+        padding-top: 140px !important;
+    }
+
+    .hero-bg .grid {
+        gap: 60px;
+    }
+
+    .hero-bg p {
+        font-size: 1rem !important;
+    }
+
+    .hero-bg .flex.flex-wrap {
+        justify-content: center;
+    }
+
+    .hero-bg a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .floating {
+        max-width: 100%;
+    }
+
+    .glass,
+    .bg-zinc-100 {
+        padding: 28px !important;
+    }
+
+    .equipment-image {
+        height: 220px;
+    }
+
+    .whatsapp-float {
+        right: 18px;
+        bottom: 18px;
+        width: 58px !important;
+        height: 58px !important;
+        font-size: 1.6rem !important;
+    }
+
+    footer .max-w-7xl {
+        text-align: center;
+    }
+
+    .process-line {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero-bg h2 {
+        font-size: 2.2rem !important;
+    }
+
+    #beneficios h2,
+    #equipamentos h2,
+    #contato h2,
+    #faq h2,
+    #processo h2,
+    #depoimentos h2 {
+        font-size: 2rem !important;
+    }
+
+    .hero-bg .inline-flex {
+        font-size: .8rem;
+        padding: 12px 18px;
+    }
+
+    .hero-bg a,
+    #contato button {
+        padding: 16px 20px !important;
+        font-size: 1rem !important;
+    }
+
+    .glass,
+    .bg-zinc-100 {
+        border-radius: 24px !important;
+    }
+
+    .equipment-image {
+        height: 200px;
+    }
+
+    iframe {
+        min-height: 350px;
+    }
+}
